@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  backend:
+    image: backend
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    ports: 
+      - 8080:80
+  frontend:
+    image: frontend
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    ports: 
+      - 80:80
